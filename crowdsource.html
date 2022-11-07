@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="calculator-contain">
+      <input type="text" id="input-el" />
+      <h2>11/07/2022 Energy Calculator Progress - Becky is trying :)</h2>
+      <ul class="calculator"></ul>
+    </div>
+    <script src="crowdsource.js"></script>
+  </body>
+</html>
+
+<style>
+  .calculator-contain {
+    margin: auto;
+    width: 80%; 
+  }
+
+  ul.calculator {
+    padding: 2em;
+    display: flexbox;
+    justify-content: center;
+  }
+
+  li.calItem {
+    background-color: beige;
+    padding-inline: 0.5em;
+    margin: 0.5em;
+    list-style-type: none;
+    line-height: 30px;
+    width: max-content;
+    border-radius: 0.5em;
+  }
+
+  li:hover {
+    background-color: bisque;
+    transition: 0.2s ease-in-out;
+  }
+
+  .calSubGroup {
+    background-color: rgb(183, 231, 250);
+    display: flex;
+    padding: 1rem;
+  }
+</style>
