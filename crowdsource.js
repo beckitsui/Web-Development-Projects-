@@ -1,6 +1,5 @@
 //0. create twin element from html to js through document.querySeletor
 const ulEl = document.querySelector(".calculator");
-let userPreference = []
 
 
 //1.create calculator items
@@ -31,14 +30,22 @@ function populateItems(InfoList) {
 }
 
 let liEl = document.getElementsByClassName("calItem")
+console.log(liEl)
 
+let userPreference = []
 for (let i=0; i<liEl.length; i++){
+  liEl[i].value = 0
+//DEBUG: need to select each item that has a class calItem
   liEl[i].addEventListener("click", function(){
-    if (!(liEl[i].textContent in userPreference)){  //this line doesn't work need debug
-      console.log(liEl[i].textContent)
+    if (liEl[i].value === 0){
+      liEl[i].classList.add("selectedButton");
+      liEl[i].value = 1
       userPreference.push(liEl[i].textContent);
     }
-    liEl[i].style.background = selectedColor;
-    console.log(userPreference);
+    else{
+      liEl[i].classList.remove("selectedButton")
+      liEl[i].value = 0
+      userPreference.splice(i,1)
+    }
   })
 }
