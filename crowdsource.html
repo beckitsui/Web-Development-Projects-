@@ -7,16 +7,38 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="calculator-contain">
-      <input type="text" id="input-el" />
+    <div id="calculator-contain" class="calculator-contain">
+      <!-- <input type="text" id="input-el" />
       <h2>11/07/2022 Energy Calculator Progress - Becky is trying :)</h2>
-      <ul class="calculator"></ul>
-    </div>
-    <script src="crowdsource.js"></script>
+      <ul class="calculator"></ul> -->
+    </div>>
+    <script src="crowdsource2.js"></script>
   </body>
 </html>
 
 <style>
+  .select_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100vw;
+    gap: 1rem;
+  }
+
+  .select__item{
+    padding: .5rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: .5rem;
+    background: pink;
+    transition: 0.2s ease-in-out;
+  }
+
+  .select__item--selected{
+    background:rgb(183, 231, 250);
+    color: white;
+    font-weight: bold;
+  }
+
   .calculator-contain {
     margin: auto;
     width: 80%; 
