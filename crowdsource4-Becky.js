@@ -154,6 +154,17 @@ calculatorQuestions.forEach((el, index) => {
   container.append(calculatorContainer);
 });
 
+//LASTLY... create a submit button!
+const submitButton = document.createElement("button")
+submitButton.innerHTML = "submit!"
+submitButton.addEventListener("click", ()=>{
+  calculatorQuestions.forEach(el=>{
+    console.log(el.response[0])
+  })
+}
+)
+container.append(submitButton)
+
 
 
 ////.....CREATING THE RESPONSE TAB.....////
@@ -190,7 +201,6 @@ calcResultSummary.append(calResultSummaryTitle);
 
 calculatorQuestions.forEach((el)=>{
     //each response has a 
-    console.log(el)
     const calcResultSummaryInd = document.createElement("div")
     calcResultSummaryInd.classList.add("calculator_result_summary_items")
     //title
